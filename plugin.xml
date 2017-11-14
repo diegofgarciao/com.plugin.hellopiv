@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.plugin.hellopiv"
+        version="0.0.1">
+
+    <name>hellopiv</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+
+    <js-module src="www/hello.js" name="example">
+        <clobbers target="hello"/>
+    </js-module>
+
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="hellopiv">
+                <param name="android-package" value="com.plugin.hellopiv.example"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/example.java" target-dir="src/com/piv/hellopiv" />
+
+    </platform>
+
+</plugin>
